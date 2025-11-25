@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #333;
+}
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+.navbar h1 {
+  color: #f1356d;
+}
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.navbar a:hover {
+  color: #f1356d;
+}
+.content {
+  max-width: 1064px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* blog previews / list */
+.blog-preview {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid #fafafa;
+}
+.blog-preview:hover {
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+.blog-preview h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 8px;
+}
+.blog-preview a{
+  text-decoration: none;
+}
+
+/* blog details page */
+.blog-details h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 10px;
+}
+.blog-details div {
+  margin: 20px 0;
+}
+.blog-details button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* create new blog form */
+.create {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.create label {
+  text-align: left;
+  display: block;
+}
+.create h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+.create input, .create textarea, .create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.create button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.beatmap-preview{
+  min-width: 1026px;
+  padding: 10px 16px;
+  margin: 20px 0;
+  border: 1px solid #0000001a;
+  border-radius: 30px 112px 30px 80px;
+  /* box-shadow: 1px 3px 5px rgba(0,0,0,0.1); */
+}
+
+/* .beatmap-preview{
+  box-shadow: 2px 6px 5px rgba(0,0,0,0.1);
+} */
+
+.beatmap-preview:hover{
+  box-shadow: 2px 6px 5px rgba(0,0,0,0.1);
+}
+
+/* .beatmap-preview:hover{
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+} */
+
+
+.beatmap-preview h2{
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 8px;
+}
+
+.beatmap-preview-card2x {
+   width: 160px;
+   height: 110px;
+   border-radius: 26px 8px 26px 8px;
+   border: 2px solid rgba(0, 0, 0, 0.100);
+   box-shadow: 1px 3px 5px rgba(0,0,0,0.2);
+   margin-left: 18px
+}
+
+.beatmap-preview-card2x:hover{
+  box-shadow: 3px 5px 5px #f1356d;
+  cursor: pointer;
+}
+
+.beatmap-attributes{
+  margin-left: 34px;
+}
+
+.beatmap-difficulty-info{
+  display: flex;
+  align-items: center;
+}
+
+.info-label {
+  display: flex;
+  align-items: center;
+}
+
+.info-label-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.info-label-text {
+  margin-left: 4px;
+}
+
+.beatmap-difficulty-info-2{
+  margin-left: 20px;
+}
+
+.beatmap-BPM{
+  margin-left: 5px;
+}
+
+.beatmap-maxcombo-icon{
+  margin-left: -6px;
+  width: 24px;
+  height: 24px;
+}
+
+.beatmap-maxcombo{
+  margin-left: -4px;
+}
+
+.info-label-icon-bpm{
+  margin-left: -2px;
+}
+
+.beatmap-download-section{
+  margin-top: 6px;
+}
+
+.beatmap-download{
+  margin-top: 4px;
+}
+
+
+.beatmap-download-icon {
+  width: 26px;
+  height: 26px;
+}
+
+
+.beatmap-gamemode-icon {
+  margin-top: 6px;
+  width: 36px;
+  height: 36px;
+}
+
+.download-text{
+  margin-left: 4px;
+}
+
+/* .direct-link:hover {
+  -webkit-text-stroke: 0.2px #f1356d;
+  color: #f1356d;
+}
+.download-direct-text:hover {
+  -webkit-text-stroke: 0.2px #f1356d;
+  color: #f1356d;
+} */
+
+.beatmap-download-direct{
+  margin-top: 54px;
+  /* cursor: pointer; */
+}
+
+.beatmap-download-direct-icon{
+  width: 26px;
+  height: 26px;
+}
+
+.image-and-beatmapper{
+  max-width: 180px;
+}
+
+.beatmapper{
+  margin-left: 22px;
+}
+
+.beatmapper-div{
+  margin-left: 25px;
+}
+
+.beatmapper-name:hover{
+  -webkit-text-stroke: 1.2px #f1356d;
+  /* color: #f1356d;
+  font-weight: 700; */
+  cursor: pointer;
+}
+
+.beatmapper-name{
+  margin-left: 3px;
+}
+
+.beatmap-difficulty-info-3{
+  margin-left: 20px;
+}
+
+.search-bar-input:focus{
+  outline: 0px;
+}

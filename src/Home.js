@@ -1,0 +1,50 @@
+import { useState } from "react";
+
+import LiveSearchPagination from "./components/LiveSearchPagination";
+
+const Home = () => {
+
+    const [beatmaps, setBeatmaps] = useState([
+        { id: 1, artist: 'GLORYHAMMER', name: 'Infernus Ad Astra / Rise Of The Chaos Wizards', beatmapper: 'nevqr', difficulty: 'The Eternal Reign of Zargothrax', stars: '3.5', AR: '9.0', OD: '10.0', CS: '4.5', BPM: '180', Length: '1:20', playcount: '120', maxCombo: '1234', HP: '6', gameMode: 'osu' },
+        { id: 2, artist: 'C418', name: 'Subwoofer Lullaby', beatmapper: 'Slyme', difficulty: 'Childhood Memories', stars: '4.5', AR: '10.0', OD: '8.0', CS: '5.5', BPM: '210', Length: '2:30', playcount: '130', maxCombo: '745', HP: '7', gameMode: 'ctb' },
+        { id: 3, artist: 'Diao Ye Zong feat. Meramipop', name: 'Saifu \'Kamiasobi no Uta\'', beatmapper: 'chen_sawthis01', difficulty: '[5K] Festival Offering to This Earthly God', stars: '5.5', AR: '9.0', OD: '7.0', CS: '6.5', BPM: '240', Length: '3:40', playcount: '140', maxCombo: '1644', HP: '8', gameMode: 'taiko' },
+        { id: 4, artist: 'GLORYHAMMER', name: 'Infernus Ad Astra / Rise Of The Chaos Wizards', beatmapper: 'nevqr', difficulty: 'The Eternal Reign of Zargothrax', stars: '3.5', AR: '9.0', OD: '10.0', CS: '4.5', BPM: '180', Length: '1:20', playcount: '120', maxCombo: '1234', HP: '6', gameMode: 'osu' },
+        { id: 5, artist: 'C418', name: 'Subwoofer Lullaby', beatmapper: 'Slyme', difficulty: 'Childhood Memories', stars: '4.5', AR: '10.0', OD: '8.0', CS: '5.5', BPM: '210', Length: '2:30', playcount: '130', maxCombo: '745', HP: '7', gameMode: 'ctb' },
+        { id: 6, artist: 'Diao Ye Zong feat. Meramipop', name: 'Saifu \'Kamiasobi no Uta\'', beatmapper: 'chen_sawthis01', difficulty: '[5K] Festival Offering to This Earthly God', stars: '5.5', AR: '9.0', OD: '7.0', CS: '6.5', BPM: '240', Length: '3:40', playcount: '140', maxCombo: '1644', HP: '8', gameMode: 'taiko' },
+        { id: 7, artist: 'GLORYHAMMER', name: 'Infernus Ad Astra / Rise Of The Chaos Wizards', beatmapper: 'nevqr', difficulty: 'The Eternal Reign of Zargothrax', stars: '3.5', AR: '9.0', OD: '10.0', CS: '4.5', BPM: '180', Length: '1:20', playcount: '120', maxCombo: '1234', HP: '6', gameMode: 'osu' },
+        { id: 8, artist: 'C418', name: 'Subwoofer Lullaby', beatmapper: 'Slyme', difficulty: 'Childhood Memories', stars: '4.5', AR: '10.0', OD: '8.0', CS: '5.5', BPM: '210', Length: '2:30', playcount: '130', maxCombo: '745', HP: '7', gameMode: 'ctb' },
+        { id: 9, artist: 'Diao Ye Zong feat. Meramipop', name: 'Saifu \'Kamiasobi no Uta\'', beatmapper: 'chen_sawthis01', difficulty: '[5K] Festival Offering to This Earthly God', stars: '5.5', AR: '9.0', OD: '7.0', CS: '6.5', BPM: '240', Length: '3:40', playcount: '140', maxCombo: '1644', HP: '8', gameMode: 'taiko' },
+        { id: 10, artist: 'GLORYHAMMER', name: 'Infernus Ad Astra / Rise Of The Chaos Wizards', beatmapper: 'nevqr', difficulty: 'The Eternal Reign of Zargothrax', stars: '3.5', AR: '9.0', OD: '10.0', CS: '4.5', BPM: '180', Length: '1:20', playcount: '120', maxCombo: '1234', HP: '6', gameMode: 'osu' },
+        { id: 11, artist: 'C418', name: 'Subwoofer Lullaby', beatmapper: 'Slyme', difficulty: 'Childhood Memories', stars: '4.5', AR: '10.0', OD: '8.0', CS: '5.5', BPM: '210', Length: '2:30', playcount: '130', maxCombo: '745', HP: '7', gameMode: 'ctb' },
+        { id: 12, artist: 'Diao Ye Zong feat. Meramipop', name: 'Saifu \'Kamiasobi no Uta\'', beatmapper: 'chen_sawthis01', difficulty: '[5K] Festival Offering to This Earthly God', stars: '5.5', AR: '9.0', OD: '7.0', CS: '6.5', BPM: '240', Length: '3:40', playcount: '140', maxCombo: '1644', HP: '8', gameMode: 'taiko' },
+        { id: 13, artist: 'GLORYHAMMER', name: 'Infernus Ad Astra / Rise Of The Chaos Wizards', beatmapper: 'nevqr', difficulty: 'The Eternal Reign of Zargothrax', stars: '3.5', AR: '9.0', OD: '10.0', CS: '4.5', BPM: '180', Length: '1:20', playcount: '120', maxCombo: '1234', HP: '6', gameMode: 'osu' },
+        { id: 14, artist: 'C418', name: 'Subwoofer Lullaby', beatmapper: 'Slyme', difficulty: 'Childhood Memories', stars: '4.5', AR: '10.0', OD: '8.0', CS: '5.5', BPM: '210', Length: '2:30', playcount: '130', maxCombo: '745', HP: '7', gameMode: 'ctb' },
+        { id: 15, artist: 'Diao Ye Zong feat. Meramipop', name: 'Saifu \'Kamiasobi no Uta\'', beatmapper: 'chen_sawthis01', difficulty: '[5K] Festival Offering to This Earthly God', stars: '5.5', AR: '9.0', OD: '7.0', CS: '6.5', BPM: '240', Length: '3:40', playcount: '140', maxCombo: '1644', HP: '8', gameMode: 'taiko' },
+        { id: 16, artist: 'GLORYHAMMER', name: 'Infernus Ad Astra / Rise Of The Chaos Wizards', beatmapper: 'nevqr', difficulty: 'The Eternal Reign of Zargothrax', stars: '3.5', AR: '9.0', OD: '10.0', CS: '4.5', BPM: '180', Length: '1:20', playcount: '120', maxCombo: '1234', HP: '6', gameMode: 'osu' },
+        { id: 17, artist: 'C418', name: 'Subwoofer Lullaby', beatmapper: 'Slyme', difficulty: 'Childhood Memories', stars: '4.5', AR: '10.0', OD: '8.0', CS: '5.5', BPM: '210', Length: '2:30', playcount: '130', maxCombo: '745', HP: '7', gameMode: 'ctb' },
+        { id: 18, artist: 'Diao Ye Zong feat. Meramipop', name: 'Saifu \'Kamiasobi no Uta\'', beatmapper: 'chen_sawthis01', difficulty: '[5K] Festival Offering to This Earthly God', stars: '5.5', AR: '9.0', OD: '7.0', CS: '6.5', BPM: '240', Length: '3:40', playcount: '140', maxCombo: '1644', HP: '8', gameMode: 'taiko' },
+        { id: 19, artist: 'GLORYHAMMER', name: 'Infernus Ad Astra / Rise Of The Chaos Wizards', beatmapper: 'nevqr', difficulty: 'The Eternal Reign of Zargothrax', stars: '3.5', AR: '9.0', OD: '10.0', CS: '4.5', BPM: '180', Length: '1:20', playcount: '120', maxCombo: '1234', HP: '6', gameMode: 'osu' },
+        { id: 20, artist: 'C418', name: 'Subwoofer Lullaby', beatmapper: 'Slyme', difficulty: 'Childhood Memories', stars: '4.5', AR: '10.0', OD: '8.0', CS: '5.5', BPM: '210', Length: '2:30', playcount: '130', maxCombo: '745', HP: '7', gameMode: 'ctb' },
+        { id: 21, artist: 'Diao Ye Zong feat. Meramipop', name: 'Saifu \'Kamiasobi no Uta\'', beatmapper: 'chen_sawthis01', difficulty: '[5K] Festival Offering to This Earthly God', stars: '5.5', AR: '9.0', OD: '7.0', CS: '6.5', BPM: '240', Length: '3:40', playcount: '140', maxCombo: '1644', HP: '8', gameMode: 'taiko' },
+        { id: 22, artist: 'GLORYHAMMER', name: 'Infernus Ad Astra / Rise Of The Chaos Wizards', beatmapper: 'nevqr', difficulty: 'The Eternal Reign of Zargothrax', stars: '3.5', AR: '9.0', OD: '10.0', CS: '4.5', BPM: '180', Length: '1:20', playcount: '120', maxCombo: '1234', HP: '6', gameMode: 'osu' },
+        { id: 23, artist: 'C418', name: 'Subwoofer Lullaby', beatmapper: 'Slyme', difficulty: 'Childhood Memories', stars: '4.5', AR: '10.0', OD: '8.0', CS: '5.5', BPM: '210', Length: '2:30', playcount: '130', maxCombo: '745', HP: '7', gameMode: 'ctb' },
+        { id: 24, artist: 'Diao Ye Zong feat. Meramipop', name: 'Saifu \'Kamiasobi no Uta\'', beatmapper: 'chen_sawthis01', difficulty: '[5K] Festival Offering to This Earthly God', stars: '5.5', AR: '9.0', OD: '7.0', CS: '6.5', BPM: '240', Length: '3:40', playcount: '140', maxCombo: '1644', HP: '8', gameMode: 'taiko' },
+        { id: 25, artist: 'GLORYHAMMER', name: 'Infernus Ad Astra / Rise Of The Chaos Wizards', beatmapper: 'nevqr', difficulty: 'The Eternal Reign of Zargothrax', stars: '3.5', AR: '9.0', OD: '10.0', CS: '4.5', BPM: '180', Length: '1:20', playcount: '120', maxCombo: '1234', HP: '6', gameMode: 'osu' },
+        { id: 26, artist: 'C418', name: 'Subwoofer Lullaby', beatmapper: 'Slyme', difficulty: 'Childhood Memories', stars: '4.5', AR: '10.0', OD: '8.0', CS: '5.5', BPM: '210', Length: '2:30', playcount: '130', maxCombo: '745', HP: '7', gameMode: 'ctb' },
+        { id: 27, artist: 'Diao Ye Zong feat. Meramipop', name: 'Saifu \'Kamiasobi no Uta\'', beatmapper: 'chen_sawthis01', difficulty: '[5K] Festival Offering to This Earthly God', stars: '5.5', AR: '9.0', OD: '7.0', CS: '6.5', BPM: '240', Length: '3:40', playcount: '140', maxCombo: '1644', HP: '8', gameMode: 'taiko' },
+        { id: 28, artist: 'GLORYHAMMER', name: 'Infernus Ad Astra / Rise Of The Chaos Wizards', beatmapper: 'nevqr', difficulty: 'The Eternal Reign of Zargothrax', stars: '3.5', AR: '9.0', OD: '10.0', CS: '4.5', BPM: '180', Length: '1:20', playcount: '120', maxCombo: '1234', HP: '6', gameMode: 'osu' },
+        { id: 29, artist: 'C418', name: 'Subwoofer Lullaby', beatmapper: 'Slyme', difficulty: 'Childhood Memories', stars: '4.5', AR: '10.0', OD: '8.0', CS: '5.5', BPM: '210', Length: '2:30', playcount: '130', maxCombo: '745', HP: '7', gameMode: 'ctb' },
+        { id: 30, artist: 'Diao Ye Zong feat. Meramipop', name: 'Saifu \'Kamiasobi no Uta\'', beatmapper: 'chen_sawthis01', difficulty: '[5K] Festival Offering to This Earthly God', stars: '5.5', AR: '9.0', OD: '7.0', CS: '6.5', BPM: '240', Length: '3:40', playcount: '140', maxCombo: '1644', HP: '8', gameMode: 'taiko' },
+        { id: 31, artist: 'GLORYHAMMER', name: 'Infernus Ad Astra / Rise Of The Chaos Wizards', beatmapper: 'nevqr', difficulty: 'The Eternal Reign of Zargothrax', stars: '3.5', AR: '9.0', OD: '10.0', CS: '4.5', BPM: '180', Length: '1:20', playcount: '120', maxCombo: '1234', HP: '6', gameMode: 'osu' },
+        { id: 32, artist: 'C418', name: 'Subwoofer Lullaby', beatmapper: 'Slyme', difficulty: 'Childhood Memories', stars: '4.5', AR: '10.0', OD: '8.0', CS: '5.5', BPM: '210', Length: '2:30', playcount: '130', maxCombo: '745', HP: '7', gameMode: 'ctb' },
+        { id: 33, artist: 'Diao Ye Zong feat. Meramipop', name: 'Saifu \'Kamiasobi no Uta\'', beatmapper: 'chen_sawthis01', difficulty: '[5K] Festival Offering to This Earthly God', stars: '5.5', AR: '9.0', OD: '7.0', CS: '6.5', BPM: '240', Length: '3:40', playcount: '140', maxCombo: '1644', HP: '8', gameMode: 'taiko' },
+    ]);
+
+    return (
+        <div>
+            <LiveSearchPagination data={beatmaps} itemsPerPage={15} />
+        </div>
+    );
+}
+
+export default Home;

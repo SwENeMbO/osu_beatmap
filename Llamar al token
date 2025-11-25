@@ -1,0 +1,19 @@
+const token = 'tu_token_jwt'; // Obtén el token JWT de alguna forma (por ejemplo, almacenado en el navegador)
+
+const requestOptions = {
+  method: 'POST', // O el método que corresponda
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${token}`, // Agrega el token JWT en el encabezado Authorization
+  },
+  body: JSON.stringify({
+    subject: 'Asunto del correo',
+    message: 'Mensaje del correo',
+    recipient: 'correo@example.com',
+  }),
+};
+
+fetch('http://localhost:8000/api/v1/email/', requestOptions)
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
